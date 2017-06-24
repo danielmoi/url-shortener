@@ -4,7 +4,10 @@
   "description": "FreeCodeCamp URL shortener",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "start:dev": "node app.js PORT=5001",
+    "go": "watchexec -e js -r yarn start"
   },
   "repository": {
     "type": "git",
