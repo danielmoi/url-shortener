@@ -1,5 +1,20 @@
 const express = require('express');
 const path = require('path');
+const mongoose = require('mongoose');
+const dotenv = require('dotenv');
+
+
+dotenv.config({ path: '.env' });
+
+console.log('process.env.DATABASE:', process.env.DATABASE);
+
+mongoose.connect(process.env.DATABASE);
+mongoose.Promise = global.Promise; // Tell Mongoose to use ES6 promises
+mongoose.connection.on('error', (err) => {
+  console.error(`🙅 🚫 🙅 🚫 🙅 🚫 🙅 🚫 → ${err.message}`);
+});
+
+require('./models/Url');
 
 const routes = require('./routes');
 

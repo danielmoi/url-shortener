@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js",
+    "start": "node app.js",
     "start:dev": "node app.js PORT=5001",
     "go": "watchexec -e js -r yarn start"
   },
@@ -25,6 +25,9 @@
   },
   "homepage": "https://github.com/danielmoi/url-shortener#readme",
   "dependencies": {
-    "express": "^4.15.3"
+    "dotenv": "^4.0.0",
+    "express": "^4.15.3",
+    "mongoose": "^4.10.8",
+    "randomstring": "^1.1.5"
   }
 }
