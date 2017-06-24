@@ -5,7 +5,7 @@
 ## API
 
 ```
-GET /:url
+GET /shorten/:url
 ```
 
 
@@ -22,6 +22,20 @@ GET /:url
 ----
 ## Example usage:
 
+```
+http://url-shortener-4000.herokuapp.com/shorten/http://google.com
+```
 
 ----
 ## Example output:
+
+```js
+{
+  data: {
+    original_url: "http://google.com/",
+    key: "d2nebv5",
+    shortened_url: "http://url-shortener-4000.herokuapp.com/d2nebv5"
+  }
+}
+
+```
