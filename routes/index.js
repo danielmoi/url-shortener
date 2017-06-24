@@ -67,9 +67,15 @@ router.get('/:key', async (req, res) => {
   return res.redirect(url);
 });
 
-router.get('/', (req, res) => {
+router.get('/*', (req, res) => {
+  const protocol = req.protocol;
+  const host = req.headers.host;
+
+  const url = `${protocol}://${host}`;
+  const suggest = `${url}/shorten/http://google.com`;
+
   res.send({
-    this: 'works',
+    try_this: suggest,
   });
 });
 
