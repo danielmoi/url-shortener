@@ -1,0 +1,11 @@
+# dev
+node_modules
+
+# git
+.git
+
+# logs
+*.log
+
+# config
+.env
